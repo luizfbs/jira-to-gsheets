@@ -1,0 +1,163 @@
+{
+    "total": 6,
+    "issues": [
+        {
+            "key": "JTG-103",
+            "fields": {
+                "issuetype": {
+                    "name": "Story"
+                },
+                "customfield_13902": null,
+                "summary": "[Node] Hello World Task",
+                "customfield_10200": [
+                    {
+                        "value": "Impediment"
+                    }
+                ],
+                "labels": [
+                    "Backend"
+                ],
+                "customfield_11035": null,
+                "customfield_14500": null,
+                "created": "2021-04-06T10:26:49.583-0300",
+                "customfield_10004": null,
+                "status": {
+                    "name": "Ready To Deploy"
+                }
+            },
+            "changelog": {
+                "histories": [
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Acceptance Testing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Doing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Ready to Do"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "key": "JTG-104",
+            "fields": {
+                "issuetype": {
+                    "name": "Story"
+                },
+                "customfield_13902": null,
+                "summary": "[Node] Hello World Task",
+                "customfield_10200": null,
+                "labels": [
+                    "Backend"
+                ],
+                "customfield_11035": null,
+                "customfield_14500": null,
+                "created": "2021-04-06T10:26:49.583-0300",
+                "customfield_10004": "EPIC-001",
+                "status": {
+                    "name": "Ready To Deploy"
+                }
+            },
+            "changelog": {
+                "histories": [
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Acceptance Testing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Doing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Ready to Do"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "key": "JTG-105",
+            "fields": {
+                "issuetype": {
+                    "name": "Story"
+                },
+                "customfield_13902": null,
+                "summary": "[Node] Hello World Task",
+                "customfield_10200": null,
+                "labels": [],
+                "customfield_11035": null,
+                "customfield_14500": null,
+                "created": "2021-04-06T10:26:49.583-0300",
+                "customfield_10004": "EPIC-002",
+                "status": {
+                    "name": "Ready To Deploy"
+                }
+            },
+            "changelog": {
+                "histories": [
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Acceptance Testing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Doing"
+                            }
+                        ]
+                    },
+                    {
+                        "created": "2021-04-06T10:26:49.583-0300",
+                        "items": [
+                            {
+                                "field": "status",
+                                "toString": "Ready to Do"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
