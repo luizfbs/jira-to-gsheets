@@ -45,7 +45,7 @@ export async function retrieveAll(progress) {
   }
 
   progress.stop();
-  return data;
+  return data.reverse();
 }
 
 export async function get(id) {

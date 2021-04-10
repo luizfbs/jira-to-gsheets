@@ -45,10 +45,10 @@ export function convert(issue, epics) {
 export function convertMany(progress, issues, epics) {
   progress.start(issues.length, 0);
 
-  const data = issues.map((e, i, arr) => {
-    const issue = convert(arr[arr.length - 1 - i], epics);
+  const data = issues.map((issue, i) => {
+    const converted = convert(issue, epics);
     progress.update(i + 1);
-    return issue;
+    return converted;
   });
 
   progress.stop();
