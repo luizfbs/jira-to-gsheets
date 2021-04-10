@@ -43,13 +43,13 @@ export function convert(issue, epics) {
 }
 
 export function convertMany(progress, issues, epics) {
-  const data = [];
   progress.start(issues.length, 0);
 
-  for (let i = 0; i < issues.length; i += 1) {
-    data.push(convert(issues[i], epics));
+  const data = issues.map((issue, i) => {
+    const converted = convert(issue, epics);
     progress.update(i + 1);
-  }
+    return converted;
+  });
 
   progress.stop();
   return data;

@@ -13,24 +13,14 @@ export function fillEmptyDates(oldStatus, actual) {
     'Done',
   ];
 
-  for (let i = 0; i < sequence.length; i += 1) {
-    if (sequence[i] === actual) {
-      // issue in this status already
-      for (let x = i + 1; x < sequence.length; x += 1) {
-        status[sequence[x]] = undefined; // clean these dates
-      }
-      break;
+  sequence.map((name, i, arr) => {
+    const others = arr.slice(i + 1);
+    if(name === actual) {
+      others.map((x) => status[x] = undefined);
+      return;
     }
-    if (!status[sequence[i]]) {
-      for (let x = i + 1; x < sequence.length; x += 1) {
-        // issue is in a bigger status, but skipped some columns
-        if (status[sequence[x]]) {
-          status[sequence[i]] = status[sequence[x]]; // fulfill these dates
-          break;
-        }
-      }
-    }
-  }
+    status[name] = status[name] || status[others.find(x => status[x] ? status[x] : undefined)];
+  });
 
   return status;
 }
@@ -40,10 +30,10 @@ export function parse(issue) {
   const status = {};
 
   status.Created = new Date(issue.fields.created);
-  for (let i = 0; i < histories.length; i += 1) {
-    const item = histories[i].items.find((e) => e.field === 'status');
-    status[item?.toString] = new Date(histories[i].created);
-  }
+  histories.map((history) => {
+    const item = history.items.find((item) => item.field === 'status');
+    status[item?.toString] = new Date(history.created);
+  });
 
   return fillEmptyDates(status, issue?.fields?.status?.name);
 }
