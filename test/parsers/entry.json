@@ -1,0 +1,61 @@
+{
+    "key": "JTG-100",
+    "fields": {
+        "issuetype": {
+            "name": "Story"
+        },
+        "customfield_13902": null,
+        "summary": "[Node] Hello World Task",
+        "customfield_10200": null,
+        "labels": [
+            "Backend"
+        ],
+        "customfield_11035": null,
+        "customfield_14500": null,
+        "created": "2021-04-01T10:26:49.583-0300",
+        "customfield_10004": "EPIC-001",
+        "status": {
+            "name": "Ready to merge"
+        }
+    },
+    "changelog": {
+        "histories": [
+            {
+                "created": "2021-04-09T10:26:49.583-0300",
+                "items": [
+                    {
+                        "field": "status",
+                        "toString": "Ready To Deploy"
+                    }
+                ]
+            },
+            {
+                "created": "2021-04-06T10:26:49.583-0300",
+                "items": [
+                    {
+                        "field": "status",
+                        "toString": "Acceptance Testing"
+                    }
+                ]
+            },
+            {
+                "created": "2021-04-03T10:26:49.583-0300",
+                "items": [
+                    {
+                        "field": "status",
+                        "toString": "Doing"
+                    }
+                ]
+            },
+            {
+                "created": "2021-04-02T10:26:49.583-0300",
+                "items": [
+                    {
+                        "field": "status",
+                        "toString": "Ready to Do"
+                    }
+                ]
+            }
+        ]
+    }
+}

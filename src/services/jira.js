@@ -56,18 +56,15 @@ export async function get(id) {
 }
 
 export async function retrieveEpics(progress, ids) {
-  const filter = ids.filter(
-    (e, i, a) => a.indexOf(e) === i
-  );
+  const filtered = ids.filter((e, i, a) => a.indexOf(e) === i);
+  progress.start(filtered.length, 0);
 
-  const data = [];
-  progress.start(filter.length, 0);
-
-  for (let i = 0; i < filter.length; i += 1) {
-    // eslint-disable-next-line no-await-in-loop
-    data.push(await get(filter[i]));
+  const data = await filtered.reduce(async (a, e, i) => {
+    const accumulator = await a;
+    const epic = await get(e);
     progress.update(i + 1);
-  }
+    return [...accumulator, epic];
+  }, []);
 
   progress.stop();
   return data;
