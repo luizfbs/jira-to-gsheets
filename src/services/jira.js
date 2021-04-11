@@ -36,13 +36,12 @@ export async function retrieveAll(progress) {
   data = data.concat(result.issues);
   progress.start(result.total, 0);
 
-  while (result.total > data.length) {
+  do {
     page += 1;
-    // eslint-disable-next-line no-await-in-loop
     result = await retrieve(page);
     data = data.concat(result.issues);
     progress.update(data.length);
-  }
+  } while (result.total > data.length);
 
   progress.stop();
   return data.reverse();

@@ -18,6 +18,12 @@ fs.readFileSync.mockClear()
 const fetch = require('node-fetch');
 jest.mock('node-fetch');
 
+const logger = require('../src/helpers/logger.js');
+jest.mock('../src/helpers/logger.js', () => ({
+    __esModule: true,
+    default: jest.fn()
+}));
+
 test('testing completed flow with gtoken.json', async () => {
     fetch.mockClear()
         .mockResolvedValueOnce({ json: () => require('./__mocks__/data/jira.retrieve.page-1.json') })
